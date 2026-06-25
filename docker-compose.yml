@@ -1,0 +1,22 @@
+services:
+
+  job-tracker:
+    build: .
+    container_name: job-tracker
+    restart: unless-stopped
+    ports:
+      - "3030:80"
+    networks:
+      - tunnel-net
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate --url http://job-tracker:80
+    networks:
+      - tunnel-net
+
+networks:
+  tunnel-net:
+    driver: bridge
