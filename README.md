@@ -190,16 +190,15 @@ Les candidatures sont stockées dans un **GitHub Gist privé** au format JSON :
 
 | Entreprise | Type | Poste | Statut |
 |------------|------|-------|--------|
-| Neurones / SIZING | ESN | Ingénieur de Production DevOps | Envoyée |
+|  | ESN | Ingénieur de Production DevOps | Envoyée |
 | OVHcloud | Éditeur cloud | Ingénieur Production / Cloud Ops | À envoyer |
 | Devoteam | ESN | Ingénieur de Production / SysOps | À envoyer |
 | Société Générale | Grand compte | Ingénieur Infrastructure / SysOps | À envoyer |
-| Constellation (spontanée) | ESN | Ingénieur de Production / SysOps | Envoyée |
+|  | ESN | Ingénieur de Production / SysOps | Envoyée |
 
 ---
 
 ## Auteur
 
-**Fred EPESSE PRISO** — Ingénieur de Production / SysOps DevOps  
-5ème année ESGI — Classe 5ASRCB  
+**Fréderic EPESSE PRISO** — Alternant en systèmes, réseaux et cloud computing  
 GitHub : [@Whitedukecmr](https://github.com/Whitedukecmr)
