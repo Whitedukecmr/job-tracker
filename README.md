@@ -173,7 +173,7 @@ Les candidatures sont stockées dans un **GitHub Gist privé** au format JSON :
 [
   {
     "id": 1,
-    "company": "Neurones / SIZING",
+    "company": "Neurones / ...",
     "type": "ESN",
     "role": "Ingénieur de Production DevOps",
     "status": "Envoyée",
