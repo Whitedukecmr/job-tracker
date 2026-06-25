@@ -3,6 +3,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 const GIST_ID = "be8808b7e6b77f4b4a0c7a2f472a61c9";
 const GIST_FILENAME = "candidatures.json";
 const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
 const STATUS_CONFIG = {
   "À envoyer":     { color: "#3B82F6", bg: "#EFF6FF" },
@@ -51,6 +52,8 @@ export default function App() {
   const [rows, setRows] = useState(initialData);
   const [loading, setLoading] = useState(true);
   const [saveStatus, setSaveStatus] = useState("idle");
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [showLock, setShowLock] = useState(false);
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState("Tous");
   const [filterType, setFilterType] = useState("Toutes");
@@ -67,6 +70,7 @@ export default function App() {
   }, []);
 
   const saveRows = (newRows) => {
+    if (!isAdmin) return;
     setRows(newRows);
     setSaveStatus("saving");
     clearTimeout(saveTimer.current);
